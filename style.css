@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.top {
+  background-color: orange;
+  height: 500px;
+  display: flex;
+}
+
+.right-box {
+  height: 100%;
+  width: 50%;
+  background-color: black;
+}
+
+.left-box {
+  height: 100%;
+  width: 50%;
+}
+
+.middle-one {
+  background-color: green;
+  height: 200px;
+}
+
+.middle-two {
+  background-color: yellow;
+  height: 800px;
+}
+
+.bottom {
+  background-color: aqua;
+  height: 200px;
+}
+
