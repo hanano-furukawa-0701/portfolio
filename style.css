@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+.contents {
+  width: 100%;
+  height: 100%;
+}
+
+.head {
+  background-color: pink;
+  height: 100px;
+}
 
 .top {
   background-color: orange;
@@ -17,6 +26,10 @@
 
 .left-box {
   height: 100%;
+  width: 50%;
+}
+
+img {
   width: 50%;
 }
 
