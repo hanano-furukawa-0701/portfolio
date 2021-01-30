@@ -6,15 +6,38 @@ li {
   list-style: none;
 }
 
-.contents {
-  width: 100%;
-  height: 100%;
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .head {
   background-color: pink;
   height: 100px;
 }
+
+.contents {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.left-bar {
+  width: 20%;
+}
+
+li a {
+  display: block;
+}
+
+.item {
+  height: 70px;
+}
+
+.main {
+  width: 80%;
+}
+
 
 .top {
   background-color: orange;
@@ -31,6 +54,17 @@ li {
 .left-box {
   height: 100%;
   width: 50%;
+}
+
+.box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.picture {
+  text-align: center;
 }
 
 img {
