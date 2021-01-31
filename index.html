@@ -5,19 +5,20 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hanano Furukawa Portfolio</title>
+    <title>Hanano Furukawa's Portfolio</title>
   </head>
   <body>
-    <div class="head"></div>
-    <div class="contents">
-      <div class="left-bar">
-        <div class="manu">
-          <ul>
+    <div class="header">
+      <div class="header-item">
+        <h1 class="header-log">Hanano Furukawa's Portfolio</h1>
+      </div>
+      <div class="menu">
+          <ul class="menu-items">
             <li class="item">
               <a href="index.html#profile">プロフィール</a>
             </li>
             <li class="item">
-              <a href="index.html#language">学んだ言語</a>
+              <a href="index.html#study">学習経験</a>
             </li>
             <li class="item">
               <a href="index.html#app">作成アプリ</a>
@@ -26,44 +27,48 @@
               <a href="index.html#contact">連絡先</a>
             </li>
           </ul>
-        </div>
       </div>
+    </div>
+    <div class="contents">
       <div class="main">
           <div class="top" id="profile">
-            <div class="left-box">
-              <div class="box">
-                <div class="picture">
-                  <img src="image/profile.JPG">
-                </div>
-              </div>
-            </div>
-            <div class="right-box">
-              <div class="profile">
-                <div class="title">
+              <div class="title">
                   <h2>
                     プロフィール
                   </h2>
-                </div>
-                <div class="details">
-                  <ul>
-                    <li>名前：古川 花乃</li>
-                    <li>生年月日：1996年7月1日</li>
-                    <li>趣味：カレー作り</li>
-                    <li>現職：食品メーカー営業職</li>
-                  </ul>
-                </div>
               </div>
-            </div>
+              <div class="pro-deatils">
+                  <div class="left-box">
+                    <div class="box">
+                      <div class="picture">
+                        <img src="image/profile.JPG" class="pro-picture">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="right-box">
+                    <div class="text">
+                        <ul>
+                          <li class="pro-text"><span>名前：</span>古川 花乃</li>
+                          <li class="pro-text"><span>生年月日：</span>1996年7月1日</li>
+                          <li class="pro-text"><span>出身：</span>愛知県</li>
+                          <li class="pro-text"><span>現職：</span>新卒で食品メーカーに就職し、営業職として勤務する社会人2年目です</li>
+                          <li class="pro-text"><span>転職理由：</span>興味からプログラミングの勉強を始め、コードで思い通りに実装できることに面白さを感じ、より専門的なスキルを武器に仕事がしたいと思い転職を決めました</li>
+                          <li class="pro-text"><span>趣味：</span>カレー作り、居酒屋さん開拓</li>
+                        </ul>
+                    </div>
+                  </div>
+              </div>
           </div>
-          <div class="middle-one" id="language">
+          <div class="middle-one" id="study">
             <div class="title">
               <h2>
-                学んだ言語
+                学習経験
               </h2>
             </div>
             <div class="details">
               <h3>HTML CSS Ruby JavaScript</h3>
-              <h3>Ruby on Rails を用いたアプリケーション開発</h3>
+              <h3>Ruby on Rails、MySQL を用いたアプリケーション開発</h3>
+              <a href="https://github.com/hanano-furukawa-0701" class="github"><span>github：</span>https://github.com/hanano-furukawa-0701</a>
             </div>
           </div>
           <div class="middle-two" id="app">
@@ -74,7 +79,7 @@
             </div>
             <ul class="list">
               <li class="app">
-                <h3 class="name">Kattayo!</h3>
+                <h3 class="name">- Kattayo! -</h3>
                 <div class="details">
                   <a href="https://kattayo.herokuapp.com">
                     <img src="image/kattayo.png" class="app-image">
@@ -82,7 +87,7 @@
                 </div>
               </li>
               <li class="app">
-                <h3 class="name">FURIMA</h3>
+                <h3 class="name">- FURIMA -</h3>
                 <div class="details">
                   <a href="http://18.180.151.34/">
                     <img src="image/furima.png" class="app-image">
@@ -92,14 +97,13 @@
             </ul>
           </div>
           <div class="bottom" id="contact">
-            <div class="title">
+            <div class="contact-title">
               <h2>
                 連絡先
               </h2>
             </div>
             <div class="details">
-              <h3>mail</h3>
-              <p>guchuanhuanai@gmail.com</p>
+              <span>mail：</span>guchuanhuanai@gmail.com
             </div>
           </div>
       </div>
