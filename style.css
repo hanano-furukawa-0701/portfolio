@@ -14,6 +14,14 @@ a {
   color: black;
 }
 
+span {
+  font-weight: bold;
+}
+
+h3 {
+  padding-bottom: 15px;
+}
+
 .header {  
   width: 100%;
 }
@@ -64,6 +72,15 @@ li a {
   margin: 0 auto;
 }
 
+.title {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.details {
+  text-align: center;
+}
+
 
 .top {
  padding: 120px 60px 140px;
@@ -79,14 +96,6 @@ li a {
   width: 40%;
 }
 
-.right-box {
-  height: 100%;
-  width: 60%;
-}
-
-.pro-text {
-  padding-bottom: 5px;
-}
 
 .box {
   height: 100%;
@@ -99,6 +108,15 @@ li a {
 .pro-picture {
   width: 70%;
   border-radius: 50%;
+}
+
+.right-box {
+  height: 100%;
+  width: 60%;
+}
+
+.pro-text {
+  padding-bottom: 5px;
 }
 
 .middle-one {
@@ -143,20 +161,6 @@ a:hover {
   padding-bottom: 30px;
 }
 
-.title {
-  text-align: center;
-  padding-bottom: 60px;
-}
 
-.details {
-  text-align: center;
-}
 
-span {
-  font-weight: bold;
-}
-
-h3 {
-  padding-bottom: 15px;
-}
 
