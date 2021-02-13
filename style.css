@@ -22,26 +22,50 @@ h3 {
   padding-bottom: 15px;
 }
 
-.header {  
+
+.menu {
   width: 100%;
+  height: 65px;
+  background-color: white;
+  position: fixed;
+  z-index: 100;
+}
+
+.menu-items {
+  float: right;
+  margin-right: 25px;
+  display: flex;
+}
+
+li a {
+  display: block;
+}
+
+.item {
+  padding-left: 25px;
+  padding-right: 25px;
+  line-height: 65px;
+  font-weight: bold;
 }
 
 .header-item {
-  width:100%;
-  height: 520px;
+  padding-top: 65px;
+  margin-bottom: 65px;
+  width: 100%;
+  height: 550px;
   background-size: cover;
   position: relative;
 }
 
 .header-item img {
   width: 100%;
-  height: 510px;
+  height: 550px;
 }
 
 
 .header-log {
   position: absolute;
-  top: 44%;
+  top: 57%;
   left: 50%;
   -ms-transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%);
@@ -52,10 +76,6 @@ h3 {
 }
 
 
-.menu-items {
-  display: flex;
-  justify-content: center;
-}
 
 .contents {
   width: 100%;
@@ -63,17 +83,6 @@ h3 {
 }
 
 
-li a {
-  display: block;
-}
-
-.item {
-  height: 65px;
-  padding-left: 25px;
-  padding-right: 25px;
-  line-height: 65px;
-  font-weight: bold;
-}
 
 .main {
   max-width: 980px;

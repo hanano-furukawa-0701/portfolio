@@ -19,11 +19,13 @@ window.onload = function (){
       let targetElement = document.getElementById(href.replace('#',""));
       const rect = targetElement.getBoundingClientRect().top;
       const offset = window.pageYOffset;
-      const target = rect + offset;
+      const gap = 65;
+      const target = rect + offset - gap;
       window.scrollTo({
         top: target,
         behavior: 'smooth'
       });
+      console.log("pk");
     });
   }
 };
