@@ -28,10 +28,10 @@ window.onload = function (){
     });
   }
 
-  // クリックしてクラス追加
+
   const btn = document.getElementById('dropdown-btn');
   if(btn){
-    btn.addEventListener('click', function(){
+    btn.addEventListener('mouseover', function(){
       this.classList.toggle('is-open');
       console.log('ok');
     });

@@ -54,14 +54,21 @@ li a {
 
 .dropdown-list {
   position: absolute;
+  display: none;
 }
 
+.is-open .dropdown-list {
+  display: block;
+  z-index: 100;
+}
+
+ 
 .dropdown-item {
   width: 200px;
   height: 40px;
   line-height: 40px;
   font-size: 14px;
-  background-color: lightgrey;
+  background-color: #EEEEEE;
   padding-left: 10px;
 }
 
