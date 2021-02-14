@@ -25,7 +25,15 @@ window.onload = function (){
         top: target,
         behavior: 'smooth'
       });
-      console.log("pk");
+    });
+  }
+
+  // クリックしてクラス追加
+  const btn = document.getElementById('dropdown-btn');
+  if(btn){
+    btn.addEventListener('click', function(){
+      this.classList.toggle('is-open');
+      console.log('ok');
     });
   }
 };

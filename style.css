@@ -42,10 +42,27 @@ li a {
 }
 
 .item {
-  padding-left: 25px;
-  padding-right: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
   line-height: 65px;
   font-weight: bold;
+}
+
+.dropdown-body {
+  position: relative;
+}
+
+.dropdown-list {
+  position: absolute;
+}
+
+.dropdown-item {
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  background-color: lightgrey;
+  padding-left: 10px;
 }
 
 .header-item {
