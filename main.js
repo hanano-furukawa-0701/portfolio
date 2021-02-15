@@ -32,8 +32,10 @@ window.onload = function (){
   const btn = document.getElementById('dropdown-btn');
   if(btn){
     btn.addEventListener('mouseover', function(){
-      this.classList.toggle('is-open');
-      console.log('ok');
+      this.classList.add('active');
+    });
+    btn.addEventListener('mouseout', function(){
+      this.classList.remove('active');
     });
   }
 };
