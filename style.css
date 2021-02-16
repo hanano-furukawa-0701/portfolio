@@ -194,7 +194,12 @@ a:hover {
   padding-bottom: 90px;
 }
 
+.name {
+  padding-bottom: 5px;
+}
+
 .app-image {
+  margin-top:10px;
   width: 60%;
   height: 270px;
 }
