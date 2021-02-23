@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "YuGothic-M";
+  font-family: "Hiragino Kaku Gothic ProN";
 }
 
 ul {
@@ -34,7 +34,7 @@ h3 {
 
 .menu-items {
   float: right;
-  margin-right: 25px;
+  margin-right: 45px;
   display: flex;
 }
 
@@ -48,6 +48,50 @@ li a {
   line-height: 65px;
   font-weight: bold;
 }
+
+@media screen and (max-width:532px){
+  .menu-items {
+    margin: 0;
+  }
+  .item {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width:453px){
+  .menu-items {
+    margin: 0;
+  }
+  .item {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 12px;
+  }
+  .last-item {
+    display: none;
+  }
+}
+
+@media screen and (max-width:300px){
+  .menu-items {
+    margin: 0;
+  }
+  .item {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 12px;
+  }
+  .last-item {
+    display: none;
+  }
+}
+
+@media screen and (max-width:245px){
+  .menu-items {
+    display: none;
+  }
+}
+
 
 .dropdown-body {
   position: relative;
