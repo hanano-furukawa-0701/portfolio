@@ -230,6 +230,24 @@ li a {
   }
 }
 
+@media screen and (max-width:532px){
+  .pro-deatils {
+    display: block;
+  }
+  .left-box {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .pro-picture {
+    display: block;
+    margin: 0 auto;
+  }
+  .right-box {
+    width: 100%;
+    margin: 70px auto;
+  }
+}
+
 .middle-one {
   background-color: lightgray;
   padding: 80px 40px 140px;
