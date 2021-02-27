@@ -253,9 +253,47 @@ li a {
   padding: 80px 40px 140px;
 }
 
+.study-box {
+  background-color: white;
+  margin-bottom: 12px;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.left-item {
+  width: 20%;
+  color: dimgray;
+}
+
+.right-item {
+  width: 80%;
+  padding-left: 10px;
+}
+
 .github {
   display: block;
   padding-top: 35px;
+  font-size: 18px;
+}
+
+@media screen and (max-width:750px) {
+  .study-box {
+    display: block;
+  }
+  .left-item {
+    width: 100%;
+    padding-bottom: 5px;
+  }
+  .right-item {
+    width: 100%;
+    padding: 0px;
+  }
+  .github {
+    display: block;
+    padding-top: 35px;
+    font-size: 16px;
+  }
 }
 
 .middle-two {
