@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Hiragino Kaku Gothic ProN";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.contents {
+  max-width: 100%;
+  height: 100%;
+}
+
+.harapeko {
+  max-width: 600px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: pink;
+}
+
+.top {
+  width: 600px;
+  height: 50px;
+  padding-left: 5px;
+  background-color: yellow;
+  position: fixed;
+  z-index: 100;
+}
+
+.item-box {
+  display: flex;
+  line-height: 50px;
+}
+
+.left-item {
+  padding: 0 5px;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  padding-top: 50px;
+}
+
+.harapeko-area {
+  padding: 15px 10px;
+}
+
+.harapeko-items {
+  display: flex;
+}
+
+.harapeko-icon {
+  width: 40px;
+  height: 40px;
+  line-height: 38.5px;
+  font-size: 23px;
+  text-align: center;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.harapeko-msg {
+  height: 100%;
+  margin-left: 18px;
+  padding: 7px 10px;
+  background-color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  position: relative;
+}
+
+.harapeko-msg::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -10px;
+  top: 10px;
+  border-right: 20px solid white;
+  border-top: 15px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+.bottom {
+  width: 600px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  background-color: yellow;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+}
+
+input {
+  width: 80%;
+  height: 32px;
+  border-radius: 10px;
+  font-size: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+button {
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 32px;
+  border-radius: 10px;
+}
+
+
+
+
+

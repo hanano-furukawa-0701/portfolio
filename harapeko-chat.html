@@ -2,10 +2,45 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="javascripts/harapeko.js"></script>
+    <link rel="stylesheet" href="stylesheets/harapeko.css">
+    <script src="https://kit.fontawesome.com/ccb6c5b37d.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hanano Furukawa's Portfolio</title>
+    <title>はらぺこチャット</title>
   </head>
+  <body>
+    <div class="contents">
+      <div class="harapeko">
+        <div class="top">
+          <div class="item-box">
+            <div class="left-item">
+              <a href="index.html">
+                <h3>＜</h3>
+              </a>
+            </div>
+            <div class="right-item">
+              <h3>はらぺ子</h3>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="harapeko-area">
+            <div class="harapeko-items">
+              <div class="harapeko-icon">
+                <i class="fas fa-hamburger"></i>
+              </div>
+              <div class="harapeko-msg">
+                <p>お腹すいた！腹ペコ度を０〜５段階で教えて！！</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <input type="text" placeholder="メッセージを入力" class="chat-input" id="chat-input">
+          <button class="chat-button" id="chat-button">Send</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
