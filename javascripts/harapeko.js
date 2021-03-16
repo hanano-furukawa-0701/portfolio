@@ -34,13 +34,16 @@ let chatCount = 0;
 
 const formElement = document.getElementById('chat-button');
 
-switch(chatCount) {
-  case 0:
-    formElement.addEventListener('click', handleSubmit);
-    break;
-  default:
-    formElement.addEventListener('click', afterSubmit);
-    break;
+while(chatCount < 10) {
+  switch(chatCount) {
+    case 0:
+      formElement.addEventListener('click', handleSubmit);
+      chatCount++;
+      break;
+    case 1:
+      formElement.addEventListener('click', afterSubmit);
+      break;
+  }
 }
 
 function handleSubmit(event) {
