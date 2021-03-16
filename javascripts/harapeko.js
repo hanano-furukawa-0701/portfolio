@@ -29,21 +29,17 @@ setTimeout(() =>{
   parentElement.insertAdjacentHTML('beforeend', harapekoHtml); 
 }, 500);
 
-let chatCount = 0;
+var chatCount = 0;
 
 
 const formElement = document.getElementById('chat-button');
 
-while(chatCount < 10) {
-  switch(chatCount) {
-    case 0:
-      formElement.addEventListener('click', handleSubmit);
-      chatCount++;
-      break;
-    case 1:
-      formElement.addEventListener('click', afterSubmit);
-      break;
-  }
+
+if(chatCount == 0){
+  formElement.addEventListener('click', handleSubmit);
+  chatCount++;
+} else {
+  formElement.addEventListener('click', afterSubmit);
 }
 
 function handleSubmit(event) {
