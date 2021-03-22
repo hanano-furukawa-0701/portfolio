@@ -142,14 +142,18 @@ function afterSubmit(event) {
 
 // 検討すること
 const observer = new MutationObserver((render) => {
-  scrollToEnd();
+  scrollToBottom();
+  
 });
 
 observer.observe(parentElement, {
   childList: true,
 });
 
-function scrollToEnd(){
+function scrollToBottom(){
   parentElement.scrollTop = parentElement.scrollHeight;
-}
+};
+
+
+
 
