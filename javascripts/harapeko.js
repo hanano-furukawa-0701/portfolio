@@ -3,7 +3,7 @@ const harapekoChat = [
   'ブレスケア噛んでおこうか',
   '美味しいコーヒー飲みに行こう！',
   'デザートは別腹♪',
-  'うどんが食べたいなあ、、、',
+  'うどんを食べに行こう！きつね！！',
   'お！これはカレー日和だね！！！',
   'はらぺこだ！餃子にビールにラーメンも食べたい(^^)',
   '０〜５の数字で教えてね！',
@@ -29,7 +29,7 @@ setTimeout(() =>{
   parentElement.insertAdjacentHTML('beforeend', harapekoHtml); 
 }, 500);
 
-var chatCount = 0;
+let chatCount = 0;
 
 
 const formElement = document.getElementById('chat-button');
@@ -138,3 +138,18 @@ function afterSubmit(event) {
     parentElement.insertAdjacentHTML('beforeend', harapekoHtml); 
   }, 700);
 }
+
+
+// 検討すること
+const observer = new MutationObserver((render) => {
+  scrollToEnd();
+});
+
+observer.observe(parentElement, {
+  childList: true,
+});
+
+function scrollToEnd(){
+  parentElement.scrollTop = parentElement.scrollHeight;
+}
+
