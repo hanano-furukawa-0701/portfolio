@@ -10,23 +10,38 @@ const harapekoChat = [
   [['レッツゴー！！'],['わくわく😊'],['食べることは生きること！']]
 ];
 
+function buildHarapekoHtml(harapekoValue){
+  const harapekoHtml =
+       `<div class="harapeko-area" id="harapeko-area">
+          <div class="harapeko-items">
+            <div class="harapeko-icon">
+              <i class="fas fa-hamburger"></i>
+            </div>
+            <div class="harapeko-msg">
+              <p>${harapekoValue}</p>
+            </div>
+          </div>
+        </div>`
+  return harapekoHtml;
+}
+
+function buildUserHtml(userValue){
+  const userHtml =
+     `<div class="user-area" id="user-area">
+        <div class="user-item">
+          <div class="user-msg">
+            <p>${userValue}</p>
+          </div>
+        </div>
+      </div>`
+  return userHtml;
+}
 
 
 const parentElement = document.querySelector('#chat-area');
 
 setTimeout(() =>{
-  const harapekoHtml =
-     `<div class="harapeko-area" id="harapeko-area">
-        <div class="harapeko-items">
-          <div class="harapeko-icon">
-            <i class="fas fa-hamburger"></i>
-          </div>
-          <div class="harapeko-msg">
-            <p>${harapekoChat[0]}</p>
-          </div>
-        </div>
-      </div>`
-  parentElement.insertAdjacentHTML('beforeend', harapekoHtml); 
+  parentElement.insertAdjacentHTML('beforeend', buildHarapekoHtml(harapekoChat[0])); 
 }, 500);
 
 let chatCount = 0;
@@ -36,30 +51,25 @@ const formElement = document.getElementById('chat-button');
 
 
 if(chatCount == 0){
-  formElement.addEventListener('click', handleSubmit);
-  chatCount++;
+  formElement.addEventListener('click', userSubmit);
 } else {
   formElement.addEventListener('click', afterSubmit);
 }
 
-function handleSubmit(event) {
+function userSubmit(event) {
   event.preventDefault();
   const element = document.querySelector('#chat-input');
   const userValue = element.value;
   if (userValue ==""){
     return false;
   } else {
-    const userHtml =
-     `<div class="user-area" id="user-area">
-        <div class="user-item">
-          <div class="user-msg">
-            <p>${userValue}</p>
-          </div>
-        </div>
-      </div>`
-    parentElement.insertAdjacentHTML('beforeend', userHtml); 
+    parentElement.insertAdjacentHTML('beforeend', buildUserHtml(userValue)); 
     element.value = '';
   }
+  harapekoSubmit(userValue);
+}
+
+function harapekoSubmit(userValue){
   switch(userValue){
     case '0':
     case '０':
@@ -89,19 +99,8 @@ function handleSubmit(event) {
       harapekoValue = harapekoChat[7];
       break;
   }
-  const harapekoHtml =
-     `<div class="harapeko-area" id="harapeko-area">
-        <div class="harapeko-items">
-          <div class="harapeko-icon">
-            <i class="fas fa-hamburger"></i>
-          </div>
-          <div class="harapeko-msg">
-            <p>${harapekoValue}</p>
-          </div>
-        </div>
-      </div>`
   setTimeout(() =>{
-    parentElement.insertAdjacentHTML('beforeend', harapekoHtml); 
+    parentElement.insertAdjacentHTML('beforeend', buildHarapekoHtml(harapekoValue)); 
   }, 700);
 }
 
@@ -112,30 +111,11 @@ function afterSubmit(event) {
   if (userValue ==""){
     return false;
   } else {
-    const userHtml =
-     `<div class="user-area" id="user-area">
-        <div class="user-item">
-          <div class="user-msg">
-            <p>${userValue}</p>
-          </div>
-        </div>
-      </div>`
-    parentElement.insertAdjacentHTML('beforeend', userHtml); 
+    parentElement.insertAdjacentHTML('beforeend', buildUserHtml(userValue)); 
     element.value = '';
   }
-  const harapekoHtml =
-   `<div class="harapeko-area" id="harapeko-area">
-      <div class="harapeko-items">
-        <div class="harapeko-icon">
-          <i class="fas fa-hamburger"></i>
-        </div>
-        <div class="harapeko-msg">
-          <p>${harapekoChat[8][Math.floor(Math.random() * harapekoChat[8].length)]}</p>
-        </div>
-      </div>
-    </div>`
   setTimeout(() =>{
-    parentElement.insertAdjacentHTML('beforeend', harapekoHtml); 
+    parentElement.insertAdjacentHTML('beforeend', buildHarapekoHtml(harapekoChat[8][Math.floor(Math.random() * harapekoChat[8].length)])); 
   }, 700);
 }
 
@@ -143,7 +123,7 @@ function afterSubmit(event) {
 // 検討すること
 const observer = new MutationObserver((render) => {
   scrollToBottom();
-  
+
 });
 
 observer.observe(parentElement, {
