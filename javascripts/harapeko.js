@@ -6,7 +6,7 @@ const harapekoChat = [
   'うどんを食べに行こう！きつね！！',
   'お！これはカレー日和だね！！！',
   'はらぺこだ！餃子にビールにラーメンも食べたい(^^)',
-  '０〜５の数字で教えてね！',
+  '腹ペコ度を０〜５の数字で教えてね！',
   [['レッツゴー！！'],['わくわく😊'],['食べることは生きること！']]
 ];
 
@@ -37,24 +37,15 @@ function buildUserHtml(userValue){
   return userHtml;
 }
 
-
 const parentElement = document.querySelector('#chat-area');
 
 setTimeout(() =>{
   parentElement.insertAdjacentHTML('beforeend', buildHarapekoHtml(harapekoChat[0])); 
 }, 500);
 
-let chatCount = 0;
-
-
 const formElement = document.getElementById('chat-button');
-
-
-if(chatCount == 0){
-  formElement.addEventListener('click', userSubmit);
-} else {
-  formElement.addEventListener('click', afterSubmit);
-}
+let chatCount = 0;
+formElement.addEventListener('click', userSubmit);
 
 function userSubmit(event) {
   event.preventDefault();
@@ -66,7 +57,14 @@ function userSubmit(event) {
     parentElement.insertAdjacentHTML('beforeend', buildUserHtml(userValue)); 
     element.value = '';
   }
-  harapekoSubmit(userValue);
+  switch(chatCount){
+    case 0:
+      harapekoSubmit(userValue);
+      break;
+    default:
+      nextSubmit();
+      break;
+  }
 }
 
 function harapekoSubmit(userValue){
@@ -99,31 +97,23 @@ function harapekoSubmit(userValue){
       harapekoValue = harapekoChat[7];
       break;
   }
+  if(harapekoValue < harapekoChat[7]){
+    chatCount++;
+  }
   setTimeout(() =>{
     parentElement.insertAdjacentHTML('beforeend', buildHarapekoHtml(harapekoValue)); 
   }, 700);
 }
 
-function afterSubmit(event) {
-  event.preventDefault();
-  const element = document.querySelector('#chat-input');
-  const userValue = element.value;
-  if (userValue ==""){
-    return false;
-  } else {
-    parentElement.insertAdjacentHTML('beforeend', buildUserHtml(userValue)); 
-    element.value = '';
-  }
+function nextSubmit() {
   setTimeout(() =>{
     parentElement.insertAdjacentHTML('beforeend', buildHarapekoHtml(harapekoChat[8][Math.floor(Math.random() * harapekoChat[8].length)])); 
   }, 700);
 }
 
-
 // 検討すること
 const observer = new MutationObserver((render) => {
   scrollToBottom();
-
 });
 
 observer.observe(parentElement, {
@@ -133,6 +123,8 @@ observer.observe(parentElement, {
 function scrollToBottom(){
   parentElement.scrollTop = parentElement.scrollHeight;
 };
+
+
 
 
 
