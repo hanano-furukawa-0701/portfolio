@@ -369,4 +369,18 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 453px) {
+  .chat-link {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    position: fixed;
+    z-index: 100;
+  }
+  .chat-icon {
+    font-size: 32px;
+  }
+}
 
